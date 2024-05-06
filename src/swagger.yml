@@ -1,0 +1,30 @@
+# definitions
+definitions:
+  encrypt:
+    type: object
+    required:
+      - publicKey
+      - data
+    properties:
+      publicKey:
+        type: string
+        description: RSA public key
+      data:
+        type: object
+        description: Data to encrypt
+  decrypt:
+    type: object
+    required:
+      - privateKey
+      - objectId
+    properties:
+      privateKey:
+        type: string
+        description: RSA private key
+      objectId:
+        type: string
+        description: Encrypt data's ID
+
+schemes:
+  - https
+  - http
